@@ -4,10 +4,21 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <div>
+                    <img src="/storage/image/avatar/{{Auth::user()->avatar}}" id="avatar-perfil-usuario">
+                    <h2>Perfin de {{Auth::user()->name}}</h2>
+                    <form action="{{route('user.store')}}" enctype="multipart/form-data" method="POST">
+                        <label>Cambiar imagen de perfil</label><br>
+                        <input type="file" name="avatar">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <input type="submit" class="pull-right btn btn-primary" value="Cambiar">
+                    </form>
+                </div>
+                <br><br><br>
                 <div class="card">
-                    <div class="card-header">Perfil</div>
+                    <div class="card-header">Combiar Nombre o password</div>
                     <div class="card-body">
-                        <form action="{{route('user.update',  Auth::user()->id)}}" method="post">
+                        <form action="{{route('user.update', Auth::user()->id)}}" method="post">
                             @csrf
                             @method('put')
                             <div class="form-group row">

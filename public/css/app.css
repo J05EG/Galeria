@@ -10002,3 +10002,20 @@ h3 {
     border-color: #dee2e6;
   }
 }
+
+#avatar-perfil-usuario{
+  width: 150px;
+  height: 150px;
+  float: left;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+#avatar-perfil-usuario-barra{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  border-radius: 50%;
+}
